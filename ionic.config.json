@@ -1,0 +1,7 @@
+{
+  "name": "AppRecoverUser",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
