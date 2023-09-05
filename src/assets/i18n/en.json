@@ -1,0 +1,18 @@
+{
+  "SUBMIT": "Submit",
+  "CLEAR": "Clear",
+  "YES" : "Yes",
+  "OR": "or",
+  "YOUR PERSONAL PHONE NUMBER" : "Your personal phone number",
+  "YOUR BIRTH DATE (DAY/MONTH/YEAR)": "Your birth date (day/month/year)",
+  "PHONE NUMBER": "Phone number",
+  "BIRTH DATE" : "Birth date",
+  "ERROR: PHONE NUMBER IS REQUIRED": "Error: phone number is required",
+  "ERROR: BIRTH DATE IS REQUIRED": "Error: birth date is required",
+  "COMPLETE THE FORM" : "Complete the form.",
+  "DO YOU KNOW YOUR EMPLOYEE USER NAME? IF YOU KNOW IT CLICK YES, IF YOU DONT KNOW IT CLICK NO.": "Do you know your employee user name? if you know it click Yes, if you dont know it click No",
+  "THE DATA ENTERED IS CORRECT. YOU WILL RECEIVE YOUR USERNAME VIA SMS IN A FEW SECONDS.": "The data entered is correct. you will receive your username via sms in a few seconds.",
+  "THE DATA ENTERED IS INCORRECT." : "The data entered is incorrect.",
+  "THERE WAS AN UNESPECTED ERROR. PLEASE CONTACT WITH HELPDESK." : "There was an unespected error. please contact with helpdesk.",
+  "IF YOU HAVE ANY INCIDENT, CONTACT WORKPLACE OR 9999": "If you have any incident, contact workplace or 9999."
+}

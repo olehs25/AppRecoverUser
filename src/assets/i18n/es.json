@@ -1,0 +1,18 @@
+{
+  "SUBMIT": "Enviar",
+  "CLEAR": "Limpiar",
+  "YES" : "Sí",
+  "OR": "o",
+  "YOUR PERSONAL PHONE NUMBER" : "Su número de teléfono personal",
+  "YOUR BIRTH DATE (DAY/MONTH/YEAR)": "Su fecha de nacimiento (día/mes/año)",
+  "PHONE NUMBER": "Número de teléfono",
+  "BIRTH DATE" : "Fecha de nacimiento",
+  "ERROR: PHONE NUMBER IS REQUIRED": "Error: se requiere el número de teléfono",
+  "ERROR: BIRTH DATE IS REQUIRED": "Error: se requiere la fecha de nacimiento",
+  "COMPLETE THE FORM" : "Complete el formulario.",
+  "DO YOU KNOW YOUR EMPLOYEE USER NAME? IF YOU KNOW IT CLICK YES, IF YOU DONT KNOW IT CLICK NO.": "¿Conoce su nombre de usuario de empleado? Si lo conoce, haga clic en Sí, si no lo sabe, haga clic en No",
+  "THE DATA ENTERED IS CORRECT. YOU WILL RECEIVE YOUR USERNAME VIA SMS IN A FEW SECONDS.": "Los datos introducidos son correctos. Recibirá su nombre de usuario por SMS en unos segundos.",
+  "THE DATA ENTERED IS INCORRECT." : "Los datos introducidos son incorrectos.",
+  "THERE WAS AN UNESPECTED ERROR. PLEASE CONTACT WITH HELPDESK." : "Hubo un error inesperado. Póngase en contacto con el servicio de asistencia.",
+  "IF YOU HAVE ANY INCIDENT, CONTACT WORKPLACE OR 9999": "Si tiene cualquier incidencia contactar con workplace o 9999."
+}
