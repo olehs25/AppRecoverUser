@@ -12,7 +12,7 @@ import {TranslateService} from "@ngx-translate/core";
     <div class="text">
       <p>1. {{'DO YOU KNOW YOUR EMPLOYEE USER NAME? IF YOU KNOW IT CLICK YES, IF YOU DONT KNOW IT CLICK NO.' | translate}}.
         <br /><br /> <br />
-        <a href="https://passwordreset.microsoftonline.com/" target="_blank"><input type="submit" class="button" value="{{'YES' | translate}}" />
+        <a href="http://localhost:4200/"><input type="submit" class="button" value="{{'YES' | translate}}" />
         </a> {{'OR' | translate}} <input type="submit" (click)="showForm()" style="padding: 4px 10px;" value="No" required/></p>
     </div>
     <div *ngIf="!show" class="example-wrapper">
@@ -23,21 +23,21 @@ import {TranslateService} from "@ngx-translate/core";
           <div>
             <br />
             <kendo-formfield>
-              <kendo-label [for]="cellPhone" text="{{'PHONE NUMBER' | translate}}"></kendo-label>
-              <input formControlName="cellPhone" value="kendoTextBox" #cellPhone [(ngModel)]="user.cellPhone" required/>
-              <kendo-formhint class="helptext"> {{'YOUR PERSONAL PHONE NUMBER' | translate}}</kendo-formhint>
+              <kendo-label [for]="fullName" text="{{'FULL NAME' | translate}}"></kendo-label>
+              <input formControlName="fullName" value="kendoTextBox" #fullName [(ngModel)]="user.fullName" required/>
+              <kendo-formhint class="helptext"> {{'YOUR FULL NAME' | translate}}</kendo-formhint>
               <br />
-              <kendo-formerror class="formerror">{{'ERROR: PHONE NUMBER IS REQUIRED' | translate}}</kendo-formerror>
+              <kendo-formerror class="formerror">{{'ERROR: FULL NAME IS REQUIRED' | translate}}</kendo-formerror>
             </kendo-formfield>
 
             <br />
             <kendo-formfield>
-              <kendo-label [for]="birthDate" text="{{'BIRTH DATE' | translate}}"></kendo-label>
-              <input type="date" #birthDate required formControlName="birthDate"
-                     min="1900-01-01" max="2020-12-31" [(ngModel)]="user.birthDate">
+              <kendo-label [for]="nif" text="{{'YOU NIF/NIE' | translate}}"></kendo-label>
+              <input type="text" #nif required formControlName="nif"
+                      [(ngModel)]="user.nif">
               <br />
-              <kendo-formhint class="helptext"> {{'YOUR BIRTH DATE (DAY/MONTH/YEAR)' | translate}}</kendo-formhint>
-              <kendo-formerror class="formerror">{{'ERROR: BIRTH DATE IS REQUIRED' | translate}}</kendo-formerror>
+             <kendo-formhint class="helptext"> {{'YOU PERSONAL NIF/NIE' | translate}}</kendo-formhint>
+              <kendo-formerror class="formerror">{{'ERROR: NIF IS REQUIRED' | translate}}</kendo-formerror>
             </kendo-formfield>
             <br /><br />
 
@@ -51,7 +51,7 @@ import {TranslateService} from "@ngx-translate/core";
       </form>
     </div>
     <div class="footer">
-      <p>{{'IF YOU HAVE ANY INCIDENT, CONTACT WORKPLACE OR 9999' | translate}}</p>
+      <p>{{'RESET PASS' | translate}}</p>
     </div>
   `,
 
@@ -71,15 +71,15 @@ export class HomePage {
 
 
   public registerForm: FormGroup = new FormGroup({
-    birthDate: new FormControl(),
-    cellPhone: new FormControl(),
+    nif: new FormControl(),
+    fullName: new FormControl(),
 
   });
 
 
   public  submitForm(user : UserDTO): void {
     this.registerForm.markAllAsTouched();
-    if (this.user.cellPhone!="" && this.user.birthDate!="") {
+    if (this.user.fullName!="" && this.user.nif!="") {
       this.recoverService.loadUserES(user).subscribe({
         next: (customer) => {
           this.customer = customer
@@ -89,14 +89,6 @@ export class HomePage {
 
           } else if (err.status == 200) {
             this.showPopup200()
-
-            setTimeout(() => {
-              window.open(
-                  'https://passwordreset.microsoftonline.com/',
-                  '_blank'
-              );
-            }, 4000, );
-
           } else {
             this.showPopupElse()
           }

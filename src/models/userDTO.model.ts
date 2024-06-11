@@ -1,7 +1,6 @@
 export class UserDTO {
 
-    public birthDate: string="";
-    public cellPhone: string="";
-
+    public nif: string="";
+    public fullName: string="";
 
 }

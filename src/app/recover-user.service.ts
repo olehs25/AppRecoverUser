@@ -14,7 +14,7 @@ export class RecoverUserService {
 
      return this.httpClient
              .get("http://localhost:8082/api/recoverUser"
-      +"?personalPhone="+user.cellPhone+"&birthDate="+user.birthDate);
+      +"?fullName="+user.fullName+"&nif="+user.nif);
     }
 
 
