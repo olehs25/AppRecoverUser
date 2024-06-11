@@ -1,27 +1,70 @@
-#container {
-  text-align: center;
 
-  position: absolute;
+.example-wrapper {
+  display: flex;
+  justify-content: center;
+  font-family: "Segoe UI";
+  font-size: medium;
+  margin-top: 0px;
+  margin-bottom: 30px;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+
+kendo-dropdownlist {
+  width: 170px;
+}
+
+.k-form {
+  width: 250px;
+}
+
+.k-form-legend {
+  font-size: small;
+  width: 250px;
+}
+
+
+.text {
+  text-align: center;
+  padding: 5px;
+  margin-top: 5px;
+  font-family: "Segoe UI";
+}
+
+.footer {
+  position: relative;
+  bottom: 0;
   left: 0;
   right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+  background: #111;
+  height: auto;
+  width: 100vw;
+  padding-top: 20px;
+  color: #fff;
+  text-align: center;
+
+}
+.message{
+  text-align: center;
+}
+.button{
+  padding: 5px 11px;
+  background-color: #2f2e2e;
+  color: #faf6f6;
+  border-radius: 2px;
+  border:1px solid #081c26;
 }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
+.button:hover{
+  background-color: #256e80;
 }
 
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
+.helptext{
+  font-size: 12px;
 }
 
-#container a {
-  text-decoration: none;
+.formerror{
+  color:red;
+  font-size: 12px;
 }
