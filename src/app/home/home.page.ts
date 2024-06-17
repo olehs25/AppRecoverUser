@@ -63,7 +63,7 @@ export class HomePage {
   constructor(private recoverService: RecoverUserService, public atrCtrl: AlertController,
               private translate: TranslateService) {
 
-    this.translate.setDefaultLang('en');
+    this.translate.setDefaultLang('es');
     this.translate.use(window.navigator.language);
   }
   show: boolean = true;
@@ -101,7 +101,13 @@ export class HomePage {
   public async showPopup200(): Promise<void> {
     let alert = await this.atrCtrl.create({
       message:  this.translate.instant('THE DATA ENTERED IS CORRECT. YOU WILL RECEIVE YOUR USERNAME VIA SMS IN A FEW SECONDS.'),
-      buttons: ['OK'],
+      buttons: [{
+        text: 'OK',
+        handler: () => {
+          // Redirigir a localhost:4200
+          window.location.href = 'http://localhost:4200/login';
+        }
+      }]
     });
     await alert.present();
   }
